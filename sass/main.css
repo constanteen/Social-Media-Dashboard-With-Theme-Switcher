@@ -174,7 +174,7 @@ body {
 }
 
 .box {
-  width: 14rem;
+  width: 15rem;
   height: 13rem;
   background-color: var(--boxBackground);
   border-radius: 10px;
@@ -289,7 +289,7 @@ body {
 }
 
 .rect {
-  width: 14rem;
+  width: 15rem;
   height: 7rem;
   background-color: var(--boxBackground);
   border-radius: 10px;
