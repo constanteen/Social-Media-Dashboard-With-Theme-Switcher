@@ -49,6 +49,7 @@ body {
   font-family: "Inter", sans-serif;
   -webkit-transition: background-color 1s linear;
   transition: background-color 1s linear;
+  min-height: 100%;
 }
 
 .topview {
