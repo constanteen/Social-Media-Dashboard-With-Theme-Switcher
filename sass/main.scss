@@ -6,6 +6,7 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
@@ -104,15 +105,30 @@ body {
     @include flexSpaceBetween();
     padding: 0 10rem;
     padding-top: 3rem;
+
+    @media (max-width: 1000px) {
+        padding: 0 2rem;
+    }
+
+
+    @media (max-width: 790px) {
+        flex-flow: column;
+        width: 100%;
+    }
 }
 
 .header {
     font-weight: 700;
 
+    @media (max-width: 1000px) {
+        margin: 2rem 0;
+    }
+
     &__text {
         margin-bottom: 0.5rem;
         font-size: 1.5rem;
         color: var(--text);
+        transition: color 1s linear;
     }
 
     &__sub {
@@ -125,10 +141,18 @@ body {
     margin: 1rem 0 .5rem 0;
     display: flex;
     width: 100%;
-
+    
     .header__text {
         color: var(--subheadColor);
         font-size: 1.3rem;
+        transition: color 1s linear;
+    }
+}
+
+.divider {
+    @media (max-width: 790px) {
+        border: 1px solid $DarkGrayishBlueText;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -138,6 +162,10 @@ body {
     align-items: center;
     font-size: 0.8rem;
     color: $DarkGrayishBlueText;
+
+    @media (max-width: 790px) {
+        justify-content: space-between;
+    }
 
     &__switch {
         opacity: 0;
@@ -187,10 +215,23 @@ body {
     margin-top: -6rem;
     @include flexSpaceBetween();
     flex-wrap: wrap;
+
+    @media (max-width: 1000px) {
+        padding: 0 2rem;
+    }
+
+    @media (max-width: 790px) {
+        margin-top: -2rem;
+    }
+
+    @media (max-width: 580px) {
+        padding: 0 2rem;
+        margin-top: -2rem;
+    }
 }
 
 .box {
-    width: 15rem;
+    min-width: 15rem;
     height: 13rem;
     background-color: var(--boxBackground);
     border-radius: 10px;
@@ -198,6 +239,11 @@ body {
     overflow: hidden;
     text-align: center;
     margin-bottom: 1rem;
+    justify-content: center;
+
+    @media (max-width: 580px) {
+        width: 100%;
+    }
 
     &:hover {
         background-color: var(--boxBackgroundHover);
@@ -264,14 +310,18 @@ body {
 }
 
 .rect {
-    width: 15rem;
     height: 7rem;
+    min-width: 15rem;
     background-color: var(--boxBackground);
     border-radius: 10px;
     transition: background-color 1s linear;
     overflow: hidden;
     margin-bottom: 1rem;
     padding: 1.5rem;
+
+    @media (max-width: 580px) {
+        width: 100%;
+    }
 
     &:hover {
         background-color: var(--boxBackgroundHover);
